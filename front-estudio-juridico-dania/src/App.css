@@ -5,39 +5,80 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif,baskerville,serif;
 }
-/*HEADER*/
+h5 {
+  font-family: 'Times New Normal Regular', serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #6F66C4; /* color del texto, puedes cambiarlo */
+}
 
+
+.footer-list{
+  font-family: 'Times New Normal Regular', serif;
+  font-size: 16px;
+  color: #6F66C4; /* color del texto, puedes cambiarlo */
+}
+
+/* -------------------------
+   HEADER
+------------------------- */
 /* Navbar */
 .navbar-nav {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  width: 100%;
-  flex-wrap: wrap; /* permite que los botones bajen si no entran */
+  gap: 20px;
+  flex-wrap: wrap;
 }
-/*Boton de Contacto*/
+
+.navbar .container-fluid {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+
+.navbar-collapse {
+  justify-content: center;
+}
+
+.btn-outline-custom {
+  margin-left: 20px;
+}
+
 .navbar {
-  background-color: #e6e4f7 !important; 
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  background-color: #F7F7FB !important; /* azul personalizado */
+  box-shadow: 0 4px 4px rgb(0, 0, 1.40.2); /* sombra sutil */
+  
 }
-/* Fondo morado del botón de HAMBURGUESA*/
+
+/* Fondo Morado del botón de HAMBURGUESA*/
 .navbar-toggler {
-  border: 2px solid #9A96C9; /* morado Bootstrap */
-  background-color: #ffffff; 
+  border: 2px solid #6F66C4; /* Morad Bootstrap */
+  background-color: #6F66C4; /* un blanco  opcional */
 }
 
+/* El icono (las rayitas) en morado */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(111,102,196)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
 
-
-
-
-
+/* Hover efecto */
+.navbar-toggler:hover {
+  background-color: #6F66C4; /* un blanco más suave */
+}
 
 /* Botones */
 .btn-underline-hover {
+    font-family: 'Times New Normal Regular', serif;
+    font-size: 20px;
+    font-weight: bold;
     position: relative;
     background: none;
     border: none;
-    color: #000000; /* color del texto, puedes cambiarlo */
+    color: #9A96C9; /* color del texto, puedes cambiarlo */
     transition: color 0.2s;
 }
 
@@ -58,9 +99,11 @@ body {
 }
 
 .btn-outline-custom {
+  font-family: 'Times New Normal Regular', serif;
+  font-size:  20px;
   background-color: transparent;
-  color: #9A96C9;            /* tu color */
-  border: 2px solid #9A96C9; /* tu color */
+  color: #6F66C4;            /* tu color */
+  border: 2px solid #6F66C4; /* tu color */
   border-radius: 30px; /* 👈 clave */
   padding: 8px 24px;
   font-weight: 500;
@@ -69,13 +112,157 @@ body {
 }
 
 .btn-outline-custom:hover {
-  background-color: #8f88d8;
-  color: #000000;
+  background-color: #6F66C4;
+  color: #F7F7FB;
+}
+/* -------------------------
+   HERO
+------------------------- */
+
+.hero-wrapper {
+  padding: 40px 20px;
+  background-color: #F7F7FB;
 }
 
+.hero-container {
+  max-width: 1700px;
+  margin: 0 auto;
+  border: 2px solid #E3E4E5; /* borde gris suave */
+  border-radius: 30px;
+  padding: 30px;
+  background-color: #F9F9FB; /* gris muy claro */
+  min-height: 600px; /* podés ajustar */
+  display: flex;
+  flex-direction: column;
+}
 
+.hero-intro-content {
+  font-family: 'Times New Normal Regular', serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2f2f3a; /* color del texto, puedes cambiarlo */
+}
 
+/* Bloque superior tipo imagen introductoria */
+.hero-intro {
+  border: 2px solid #DADBE3;
+  border-radius: 25px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #F7F7FB;
+}
 
+/* Zona donde vas a agregar componentes */
+.hero-content {
+  flex: 1; /* ocupa todo el espacio restante */
+  border-radius: 20px;
+}
+
+.hero-container {
+  max-width: 1700px;
+  margin: 0 auto;
+  border: 2px solid #CFCFD6;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.hero-content {
+  flex: 1;
+  border: 2px solid #E3E4E5;
+  border-radius: 25px;
+  padding: 30px;
+  background-color: #F9F9FB;
+}
+
+.hero-intro {
+  position: relative;
+  height: 300px; /* ajustá según diseño */
+  border-radius: 25px;
+  overflow: hidden;
+
+  background-image: url("/images/imagesHero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Overlay suave para que no compita con el texto */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(247, 247, 251, 0.75);
+}
+
+/* Contenido encima del overlay */
+.hero-intro-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* -------------------------
+   FOOTER
+------------------------- */
+
+/* Estilos para el footer */
+/* Elementos interactivos (con efecto hover) */
+
+.custom-footer {
+  background-color: #F7F7FB;
+  padding: 40px 20px;
+}
+.footer-link {
+  display: inline-block;
+  position: relative;
+  color: #6F66C4;
+  text-decoration: none;
+  cursor: pointer; /* Cambia el cursor para indicar interactividad */
+  transition: color 0.3s ease;
+}
+
+/* Efecto de subrayado al hover */
+.footer-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px; /* Grosor del subrayado */
+  bottom: -2px;
+  left: 0;
+  background-color: #6F66C4; 
+  transition: width 0.3s ease;
+}
+
+/* Cambio de color al hover (opcional) */
+.footer-link:hover {
+  color: #F7F7FB; 
+}
+/* Subrayado completo al hover */
+.footer-link:hover::after {
+  width: 100%; 
+}
+/* Estilos base del footer */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #F7F7FB;
+}
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-list li {
+  text-align: center;
+}
+
+.footer-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* espacio entre texto e ícono */
+}
 
 /* -------------------------
    MEDIA QUERIES
@@ -146,5 +333,15 @@ body {
 
   .navbar-nav {
     gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 20px;
+  }
+
+  .hero-intro {
+    padding: 20px;
   }
 }
