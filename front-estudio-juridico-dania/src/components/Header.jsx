@@ -34,7 +34,7 @@ const Header = () => (
                     </li>
 
                     <li className="nav-item">
-                        <button type="button" className="btn btn-underline-hover">Quienes somos</button>
+                        <button type="button" className="btn btn-underline-hover">Acerca de mi</button>
                     </li>
 
                     <li className="nav-item">

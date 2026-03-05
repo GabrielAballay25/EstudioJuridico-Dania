@@ -1,5 +1,10 @@
 // Hero.jsx
 
+import AboutMe from './AboutMe';
+import '../App.css';
+import NewsAndNotes from './NewsAndNotes';
+import AboutFeatures from './AboutFeatures';
+
 const Hero = () => {
   return (
     <section className="hero-wrapper">
@@ -15,7 +20,9 @@ const Hero = () => {
         </div>
 
         <div className="hero-content">
-          {/* Acá vas agregando componentes */}
+          <AboutMe></AboutMe>
+          <AboutFeatures></AboutFeatures>
+          <NewsAndNotes></NewsAndNotes>
         </div>
 
       </div>

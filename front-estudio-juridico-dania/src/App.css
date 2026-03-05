@@ -235,7 +235,7 @@ h5 {
 
 /* Cambio de color al hover (opcional) */
 .footer-link:hover {
-  color: #F7F7FB; 
+  color: #2f2f3a; 
 }
 /* Subrayado completo al hover */
 .footer-link:hover::after {
@@ -263,6 +263,275 @@ h5 {
   justify-content: center;
   gap: 8px; /* espacio entre texto e ícono */
 }
+
+
+/* -------------------------
+   ABOUT ME
+------------------------- */
+.about-container {
+  width: 85%;
+  max-width: 1100px;
+  margin: 80px auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 40px;
+  background: #F4F6F9;
+  border-radius: 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* CÍRCULO */
+.about-image {
+  flex-shrink: 0;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #c77d7d; /* detalle dorado elegante */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENIDO */
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  color: #c77d7d;
+  margin-bottom: 10px;
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background-color: #c77d7d;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #2f2f3a;
+  margin-bottom: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    border-radius: 40px;
+  }
+
+  .about-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .divider {
+    margin: 15px auto;
+  }
+}
+
+/* -------------------------
+   ABOUT FEATURES
+------------------------- */
+.features-container {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+/* CARD BASE */
+.flip-card {
+  width: 240px;
+  height: 240px;
+  background: transparent;
+}
+
+/* CONTENIDO INTERNO */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* EFECTO MONEDA */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* CARAS */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  text-align: center;
+}
+
+/* FRENTE (ICONO) */
+.flip-card-front {
+  background: #F4F6F9;
+  color: #c77d7d;
+  border: 4px solid #c77d7d;
+  transition: 0.4s;
+}
+
+/* REVERSO (TEXTO) */
+
+
+.flip-card-back {
+  background: #c77d7d;
+  color: white;
+  transform: rotateY(180deg);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 35px;
+  text-align: center;
+  
+  font-size: 15px;
+  line-height: 1.5;
+}
+/* HOVER - leve brillo */
+.flip-card:hover .flip-card-front {
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+
+
+/* -------------------------
+   NEW AND NOTES
+------------------------- */
+.news-section {
+  width: 85%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.news-title {
+  font-size: 32px;
+  color: #c77d7d;
+  margin-bottom: 50px;
+}
+
+/* CONTENEDOR */
+.news-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.news-card {
+  position: relative;
+  width: 320px;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* IMAGEN */
+.news-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* TITULO */
+.news-content {
+  padding: 20px;
+}
+
+.news-content h3 {
+  font-size: 18px;
+  color: #1E1E1E;
+}
+
+/* HOVER EFECTO */
+.news-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.news-card:hover .news-image img {
+  transform: scale(1.1);
+}
+
+/* OVERLAY */
+.news-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #c77d7d;
+  color: white;
+  padding: 25px;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.news-overlay h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.news-overlay p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+.news-card:hover .news-overlay {
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .news-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-card {
+    width: 90%;
+  }
+}
+
+
 
 /* -------------------------
    MEDIA QUERIES
