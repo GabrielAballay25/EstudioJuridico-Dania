@@ -1,17 +1,32 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const Header = () => (
-    <nav className="navbar navbar-expand-lg">
-        <div className="container"> {/* ← CAMBIADO */}
+const fadeInUp = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0 }
+};
 
-            <img 
-                src="images/LogoDaniaVillanueva.png"   
+const Header = () => (
+    <motion.nav
+        className="navbar navbar-expand-lg"
+        variants={fadeInUp}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+        <div className="container">
+
+            <motion.img 
+                src="images/LogoDV.png"   
                 alt="Dania Villaneva Abogada" 
-                width="180" 
+                width="75" 
                 height="75" 
                 className="d-inline-block align-text-top"
-                
+                variants={fadeInUp}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             />
             
             <button
@@ -29,31 +44,35 @@ const Header = () => (
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
-                    <li className="nav-item">
-                        <button type="button" className="btn btn-underline-hover">Inicio</button>
-                    </li>
-
-                    <li className="nav-item">
-                        <button type="button" className="btn btn-underline-hover">Acerca de mi</button>
-                    </li>
-
-                    <li className="nav-item">
-                        <button type="button" className="btn btn-underline-hover">Noticias y Notas</button>
-                    </li>
-
-                    <li className="nav-item">
-                        <button type="button" className="btn btn-underline-hover">Fallos juridicos</button>
-                    </li>
+                    {["Inicio", "Acerca de mi", "Noticias y Notas", "Fallos juridicos"].map((item, index) => (
+                        <motion.li
+                            key={index}
+                            className="nav-item"
+                            variants={fadeInUp}
+                            initial="hidden"
+                            animate="visible"
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 + index * 0.1 }}
+                        >
+                            <button type="button" className="btn btn-underline-hover">{item}</button>
+                        </motion.li>
+                    ))}
 
                 </ul>
 
-                <button className="btn-outline-custom" type="submit">
+                <motion.button
+                    className="btn-outline-custom"
+                    type="submit"
+                    variants={fadeInUp}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
+                >
                     Contactanos
-                </button>
+                </motion.button>
 
             </div>
         </div>
-    </nav>
+    </motion.nav>
 );
 
 export default Header;

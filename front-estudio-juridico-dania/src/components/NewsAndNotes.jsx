@@ -1,6 +1,7 @@
-import React from "react";
-
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import "../App.css";
+
 const newsData = [
   {
     id: 1,
@@ -28,21 +29,62 @@ const newsData = [
   }
 ];
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 }
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15
+    }
+  }
+};
+
 const NewsAndNotes = () => {
+  const sectionRef = useRef(null);
+  const inView = useInView(sectionRef, { once: true, margin: "-80px" });
+
   return (
-    <section className="news-section">
-      <h2 className="news-title">Noticias & Notas Destacadas</h2>
-      
-        <p>En este espacio comparto noticias, análisis y notas de interés vinculadas al ámbito jurídico y a la actualidad penal. <br />
-        El objetivo es acercar información clara y reflexiones que permitan comprender mejor los debates y desafíos del sistema de justicia.</p>
-      <div className="news-container">
+    <section className="news-section" ref={sectionRef}>
+
+      <motion.h2
+        className="news-title"
+        variants={fadeInUp}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        Noticias & Notas Destacadas
+      </motion.h2>
+
+      <motion.p
+        variants={fadeInUp}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+      >
+        En este espacio comparto noticias, análisis y notas de interés vinculadas al ámbito jurídico y a la actualidad penal. <br />
+        El objetivo es acercar información clara y reflexiones que permitan comprender mejor los debates y desafíos del sistema de justicia.
+      </motion.p>
+
+      <motion.div
+        className="news-container"
+        variants={containerVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+      >
         {newsData.map((item) => (
-          <a
+          <motion.a
             key={item.id}
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
             className="news-card"
+            variants={fadeInUp}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <div className="news-image">
               <img src={item.image} alt={item.title} />
@@ -57,9 +99,10 @@ const NewsAndNotes = () => {
               <p>{item.description}</p>
               <span className="read-more">Leer nota completa →</span>
             </div>
-          </a>
+          </motion.a>
         ))}
-      </div>
+      </motion.div>
+
     </section>
   );
 };

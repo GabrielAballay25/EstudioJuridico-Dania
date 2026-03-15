@@ -7,16 +7,11 @@ import Hero from './components/Hero';
 function App() {
   return (
     <div className="app-container">
-      <Header>
-        
-      </Header>
-      <Hero></Hero>
-      <Footer>
-        
-      </Footer>
-      
+      <Header />
+      <Hero />
+      <Footer />
     </div>
   );
 }
 
-export default App
+export default App;
