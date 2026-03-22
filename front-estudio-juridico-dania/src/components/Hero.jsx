@@ -3,6 +3,8 @@ import AboutMe from './AboutMe';
 import '../App.css';
 import NewsAndNotes from './NewsAndNotes';
 import AboutFeatures from './AboutFeatures';
+import FallosJuridicos from './FallosJuridicos';
+import Contacto from './Contacto';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -62,6 +64,8 @@ const Hero = () => {
           <AboutMe />
           <AboutFeatures />
           <NewsAndNotes />
+          <FallosJuridicos />
+          <Contacto />
         </motion.div>
 
       </div>
