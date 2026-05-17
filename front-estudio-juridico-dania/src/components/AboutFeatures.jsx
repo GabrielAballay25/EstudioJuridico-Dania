@@ -21,9 +21,8 @@ const cards = [
 
 // Datos de los counters
 const countersData = [
-  { target: 120, suffix: "+", label: "Casos resueltos" },
-  { target: 15,  suffix: "",  label: "Años de experiencia" },
-  { target: 94,  suffix: "%", label: "Tasa de éxito" },
+  { target: 6, suffix: "+", label: "Años de experiencia" },
+
 ];
 
 // Hook para animar un número desde 0 hasta target

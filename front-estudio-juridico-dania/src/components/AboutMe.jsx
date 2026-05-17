@@ -7,7 +7,7 @@ const AboutMe = () => {
   const inView = useInView(sectionRef, { once: true, margin: "-80px" });
 
   return (
-    <section className="about-container" ref={sectionRef}>
+    <section id="about-me" className="about-container" ref={sectionRef}>
 
       {/* IMAGEN — slide desde la izquierda */}
       <motion.div
@@ -17,7 +17,7 @@ const AboutMe = () => {
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
         <img
-          src="/images/DaniaVillanuevaAboutMe.jpg"
+          src="/images/Dania1.png"
           alt="Dania Villanueva - Abogada"
         />
       </motion.div>

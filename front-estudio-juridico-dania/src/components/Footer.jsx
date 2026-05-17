@@ -26,7 +26,7 @@ const Footer = () => {
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
           >
-            <Row> 
+            <Row>
 
               <Col md={4} className="footer-brand-col">
                 <motion.div
@@ -34,10 +34,21 @@ const Footer = () => {
                   transition={{ duration: 0.6, ease: 'easeOut', delay: 0 }}
                   className="footer-brand"
                 >
-              
+
                   <div>
                     <p className="footer-brand-name">Dania Villanueva</p>
-                    <p className="footer-tagline">Justicia con compromiso y vocacion</p>
+                    <p className="footer-tagline">JUSTICIA CON COMPROMISO Y VOCACIÓN</p>
+                    <motion.img
+                      src="images/Dania_footer.png"
+                      alt="Dania Villanueva Abogada"
+                      width="150"
+                      height="150"
+                      className="d-inline-block align-text-top footer-logo"
+                      variants={fadeInUp}
+                      initial="hidden"
+                      animate="visible"
+                      transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                    />
                   </div>
                 </motion.div>
               </Col>
@@ -47,12 +58,12 @@ const Footer = () => {
                   variants={fadeInUp}
                   transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
                 >
-                  <p className="footer-col-title">Navegacion</p>
+                  <p className="footer-col-title">Navegación</p>
                   <ul className="footer-nav-list">
-                    <li><a href="#inicio" className="footer-nav-link">Inicio</a></li>
-                    <li><a href="#nosotros" className="footer-nav-link">Quienes somos</a></li>
-                    <li><a href="#Servicios" className="footer-nav-link">Servicios legales</a></li>
-                    <li><a href="#Contact" className="footer-nav-link">Contacto</a></li>
+                    <li><a href="#hero-start" className="footer-nav-link">Inicio</a></li>
+                    <li><a href="#about-me" className="footer-nav-link">Quiénes somos</a></li>
+                    <li><a href="#fallos-juridicos" className="footer-nav-link">Casos resueltos</a></li>
+                    <li><a href="#contacto" className="footer-nav-link">Contacto</a></li>
                   </ul>
                 </motion.div>
               </Col>
@@ -65,7 +76,7 @@ const Footer = () => {
                   <p className="footer-col-title">Redes</p>
                   <div className="footer-socials">
                     <a
-                      href="#"
+                      href="https://www.instagram.com/abogada.villanueva/"
                       className="footer-social-btn"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -74,7 +85,7 @@ const Footer = () => {
                       <span>Instagram</span>
                     </a>
                     <a
-                      href="#"
+                      href="https://www.linkedin.com/in/dania-villanueva/"
                       className="footer-social-btn"
                       target="_blank"
                       rel="noopener noreferrer"

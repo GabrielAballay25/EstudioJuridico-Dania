@@ -5,6 +5,7 @@ import NewsAndNotes from './NewsAndNotes';
 import AboutFeatures from './AboutFeatures';
 import FallosJuridicos from './FallosJuridicos';
 import Contacto from './Contacto';
+import { Scroll } from "lucide-react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -13,7 +14,7 @@ const fadeInUp = {
 
 const Hero = () => {
   return (
-    <section className="hero-wrapper">
+    <section id="hero-start" className="hero-wrapper">
       <div className="hero-container">
 
         <div className="hero-intro">
@@ -48,7 +49,7 @@ const Hero = () => {
               animate="visible"
               transition={{ duration: 0.7, ease: "easeOut", delay: 1.1 }}
             >
-              Abogada penalista
+              ABOGADA PENALISTA
             </motion.p>
 
           </div>
@@ -66,6 +67,7 @@ const Hero = () => {
           <NewsAndNotes />
           <FallosJuridicos />
           <Contacto />
+
         </motion.div>
 
       </div>

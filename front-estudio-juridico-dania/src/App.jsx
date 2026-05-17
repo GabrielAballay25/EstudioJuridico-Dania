@@ -3,6 +3,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Hero from './components/Hero';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Hero />
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }
