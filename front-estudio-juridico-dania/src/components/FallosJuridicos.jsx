@@ -29,6 +29,24 @@ import caso4D from '../assets/6SobreseimientoPorLegitimaDefensa/D_LegitimaDefens
 import caso5D from '../assets/6SobreseimientoPorLegitimaDefensa/D_LegitimaDefensa_5.png'
 import caso6D from '../assets/6SobreseimientoPorLegitimaDefensa/D_LegitimaDefensa_6.png'
 
+import caso1E from '../assets/7VAC/vac1.png';
+import caso2E from '../assets/7VAC/vac2.png';
+import caso3E from '../assets/7VAC/vac3.png';
+import caso4E from '../assets/7VAC/vac4.png';
+import caso5E from '../assets/7VAC/vac5.png';
+import caso6E from '../assets/7VAC/vac6.png';
+
+import caso1F from '../assets/8Camara/camara1.png';
+import caso2F from '../assets/8Camara/camara2.png';
+import caso3F from '../assets/8Camara/camara3.png';
+import caso4F from '../assets/8Camara/camara4.png';
+import caso5F from '../assets/8Camara/camara5.png';
+import caso6F from '../assets/8Camara/camara6.png';
+import caso7F from '../assets/8Camara/camara7.png';
+import caso8F from '../assets/8Camara/camara8.png';
+import caso9F from '../assets/8Camara/camara9.png';
+import caso10F from '../assets/8Camara/camara10.png';
+
 const fallosData = [
   {
     id: 1,
@@ -54,6 +72,18 @@ const fallosData = [
     descripcion: "En un caso de lesiones y daño en el marco de un conflicto de pareja, el tribunal resolvió el sobreseimiento al acreditarse que los hechos ocurrieron en un contexto de violencia de género. Se valoró la prueba con perspectiva de género y se concluyó que la conducta fue una respuesta defensiva, necesaria y proporcional.",
     likes: 167,
   },
+  {
+    id: 5,
+    imagenes: [caso1E, caso2E, caso3E, caso4E, caso5E, caso6E],
+    descripcion: "Justicia en una causa de violencia sexual en la infancia. La Cámara Sexta del Crimen condenó al imputado a 16 años de prisión e hizo lugar al pedido formulado por esta querella, reconociendo además una reparación civil para la víctima.",
+    likes: 189,
+  },
+  {
+    id: 6,
+    imagenes: [caso1F, caso2F, caso3F, caso4F, caso5F, caso6F, caso7F, caso8F, caso9F, caso10F],
+    descripcion: "Cámaras ocultas en baños de mujeres dentro del ámbito judicial. Un caso que interpela el derecho a la intimidad, la integridad sexual y el acceso a una reparación integral para las víctimas.",
+    likes: 212,
+  }
 ];
 
 const fadeInUp = {
