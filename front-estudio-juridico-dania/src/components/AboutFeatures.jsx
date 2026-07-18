@@ -3,36 +3,35 @@ import { motion, useInView } from "framer-motion";
 import { Scale, Shield, HeartHandshake } from "lucide-react";
 import "../App.css";
 
-// Textos de las cards
 const cards = [
   {
-    icon: <Scale size={75} />,
+    Icon: Scale,
+    title: "Defensa técnica",
     text: "Defensa penal con enfoque técnico y estratégico, orientada a la protección efectiva de los derechos constitucionales.",
   },
   {
-    icon: <Shield size={75} />,
+    Icon: Shield,
+    title: "Protección penal",
     text: "Acompaño en la ejecución penal, garantizando el control de la legalidad de la pena y el acceso a derechos y beneficios, con especial atención a la dignidad humana.",
   },
   {
-    icon: <HeartHandshake size={75} />,
+    Icon: HeartHandshake,
+    title: "Acompañamiento",
     text: "Trabajo en el acceso a la justicia de infancias y mujeres en el ámbito penal, especialmente en casos de violencia de género y delitos contra la integridad sexual.",
   },
 ];
 
-// Datos de los counters
 const countersData = [
-  { target: 6, suffix: "+", label: "Años de experiencia" },
-
+  
 ];
 
-// Hook para animar un número desde 0 hasta target
 function useCounter(target, isActive) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (!isActive) return;
     let start = 0;
-    const duration = 1800; // ms
+    const duration = 1800;
     const steps = 60;
     const increment = target / steps;
     const interval = duration / steps;
@@ -53,7 +52,6 @@ function useCounter(target, isActive) {
   return count;
 }
 
-// Componente individual de counter
 const Counter = ({ target, suffix, label, isActive }) => {
   const count = useCounter(target, isActive);
   return (
@@ -67,37 +65,31 @@ const Counter = ({ target, suffix, label, isActive }) => {
   );
 };
 
-// Variantes para el stagger de las cards
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
+    transition: { staggerChildren: 0.15 },
   },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.55, ease: "easeOut" },
   },
 };
 
 const AboutFeatures = () => {
-  // Ref para detectar cuando los counters entran en pantalla
   const countersRef = useRef(null);
   const countersInView = useInView(countersRef, { once: true, margin: "-80px" });
 
-  // Ref para detectar cuando las cards entran en pantalla
   const cardsRef = useRef(null);
   const cardsInView = useInView(cardsRef, { once: true, margin: "-80px" });
 
   return (
     <>
-      {/* CARDS con stagger fade + hover lift */}
       <motion.div
         className="features-container"
         ref={cardsRef}
@@ -105,26 +97,22 @@ const AboutFeatures = () => {
         initial="hidden"
         animate={cardsInView ? "visible" : "hidden"}
       >
-        {cards.map((card, index) => (
+        {cards.map(({ Icon, title, text }, index) => (
           <motion.div
             key={index}
-            className="flip-card"
+            className="about-feature-card"
             variants={cardVariants}
-            whileHover={{ y: -10, transition: { duration: 0.3 } }}
+            whileHover={{ y: -6, transition: { duration: 0.25 } }}
           >
-            <div className="flip-card-inner">
-              <div className="flip-card-front">
-                {card.icon}
-              </div>
-              <div className="flip-card-back">
-                <p>{card.text}</p>
-              </div>
+            <div className="about-feature-icon-wrap">
+              <Icon size={22} strokeWidth={1.8} />
             </div>
+            <h3 className="about-feature-title">{title}</h3>
+            <p className="about-feature-desc">{text}</p>
           </motion.div>
         ))}
       </motion.div>
 
-      {/* COUNTERS animados */}
       <div className="counters-row" ref={countersRef}>
         {countersData.map((c, i) => (
           <Counter

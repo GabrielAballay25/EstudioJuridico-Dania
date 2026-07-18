@@ -10,6 +10,38 @@ const newsData = [
       "Un grave caso que involucra la vulneración de la intimidad y la integridad sexual, enmarcado en un contexto de violencia de género mediante el uso de medios tecnológicos.",
     image: "https://srt-assets.tadevel-cdn.com/68d1ba898f65e1c499f94a87/720.webp",
     link: "https://www.cba24n.com.ar/cordoba/grabo-con-una-camara-oculta-en-el-bano-de-mujeres--lo-acusan-de-violencia-de-genero-y-abuso-sexual_a68d1a9e78f65e1c499f886c7"
+  },
+  {
+    id: 2,
+    title: "¿JUSTICIA O MORDAZA?: EL PELIGRO TRAS EL PROYECTO DE LEY QUE BUSCA CASTIGAR LAS FALSAS DENUNCIAS EN ARGENTINA",
+    description:
+      "Una entrevista a Dania Villanueva, especialista en género, sobre el proyecto de ley presentado por la senadora Carolina Losada para agravar las penas por falsas denuncias en delitos contra la integridad sexual y violencia de género.",
+    image: "https://i.ytimg.com/vi/y9E4agZGkiU/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDyd2w47PfefSlldnJ1lOUV4pr3iQ",
+    link: "https://www.youtube.com/watch?v=y9E4agZGkiU"
+  },
+  {
+    id: 3,
+    title: "FEMICIDIO DE CATALINA GUTIÉRREZ: LAS CLAVES DE LA PRISIÓN PERPETUA PARA NÉSTOR SOTO Y EL DEBATE SOBRE LOS LÍMITES ÉTICOS EN LA JUSTICIA",
+    description:
+      "Un análisis técnico y ético sobre la condena a prisión perpetua de Néstor Soto por el femicidio de Catalina Gutiérrez en Córdoba. El objetivo principal es explicar los fundamentos jurídicos del fallo, incluyendo los agravantes de femicidio y criminis causa, y debatir sobre los límites éticos de la defensa penal y el rol de los medios de comunicación",
+    image: "https://i.ytimg.com/vi/PVOFwtk4YD0/hq720.jpg?sqp=-oaymwFBCNAFEJQDSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGHIgSygyMA8=&rs=AOn4CLCW_3Q5Tp0QLDbkrahjh_tgsChtjw",
+    link: "https://www.youtube.com/watch?v=PVOFwtk4YD0"
+  },
+  {
+    id: 4,
+    title: "19 AÑOS DE PRISIÓN PARA CLAUDIO CONTARDI: BUSCANDO VISIBILIZAR LAS AGRESIONES SUFRIDAS POR PARTE DEL PADRE DE SUS DOS HIJOS",
+    description:
+      "Un análisis técnico y ético sobre la condena a prisión perpetua de Néstor Soto por el femicidio de Catalina Gutiérrez en Córdoba. El objetivo principal es explicar los fundamentos jurídicos del fallo, incluyendo los agravantes de femicidio y criminis causa, y debatir sobre los límites éticos de la defensa penal y el rol de los medios de comunicación",
+    image: "https://i.ytimg.com/vi/2xCbB9xhgIM/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCsUe4JCrupiVPubnQlwRriTSnVxg",
+    link: "https://www.youtube.com/watch?v=2xCbB9xhgIM"
+  },
+  {
+    id: 5,
+    title: "SENTENCIA A PRISIÓN PERPETUA DE DIEGO CONCHA POR EL ABUSO SEXUAL SEGUIDO DE MUERTE (SUICIDIO) DE LUANA LUDUEÑA",
+    description:
+      "El objetivo principal es debatir las implicancias jurídicas de este fallo, el cual consolida un precedente en Córdoba al considerar el suicidio de la víctima como una consecuencia directa del abuso sufrido",
+    image: "https://i.ytimg.com/vi/Ba4wSVVXDzM/hq720.jpg?sqp=-oaymwFBCNAFEJQDSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGHIgVigiMA8=&rs=AOn4CLCKmDkQeONvU9d_zOShcXSF6nBDFw",
+    link: "https://www.youtube.com/watch?v=Ba4wSVVXDzM"
   }
 ];
 

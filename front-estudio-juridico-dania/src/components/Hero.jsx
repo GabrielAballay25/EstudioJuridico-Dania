@@ -5,7 +5,9 @@ import NewsAndNotes from './NewsAndNotes';
 import AboutFeatures from './AboutFeatures';
 import FallosJuridicos from './FallosJuridicos';
 import Contacto from './Contacto';
-import { Scroll } from "lucide-react";
+import { Scroll, Section } from "lucide-react";
+import FSAPViewer from "./FSAPViewer_v2";
+import PageViewer from "./PageViewer";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -65,7 +67,10 @@ const Hero = () => {
           <AboutMe />
           <AboutFeatures />
           <NewsAndNotes />
+          <FSAPViewer />
           <FallosJuridicos />
+          
+          
           <Contacto />
 
         </motion.div>

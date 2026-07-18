@@ -70,19 +70,13 @@ const fallosData = [
     id: 4,
     imagenes: [caso1D, caso2D, caso3D, caso4D, caso5D, caso6D],
     descripcion: "En un caso de lesiones y daño en el marco de un conflicto de pareja, el tribunal resolvió el sobreseimiento al acreditarse que los hechos ocurrieron en un contexto de violencia de género. Se valoró la prueba con perspectiva de género y se concluyó que la conducta fue una respuesta defensiva, necesaria y proporcional.",
-    likes: 167,
+    likes: 100,
   },
   {
     id: 5,
     imagenes: [caso1E, caso2E, caso3E, caso4E, caso5E, caso6E],
-    descripcion: "Justicia en una causa de violencia sexual en la infancia. La Cámara Sexta del Crimen condenó al imputado a 16 años de prisión e hizo lugar al pedido formulado por esta querella, reconociendo además una reparación civil para la víctima.",
-    likes: 189,
-  },
-  {
-    id: 6,
-    imagenes: [caso1F, caso2F, caso3F, caso4F, caso5F, caso6F, caso7F, caso8F, caso9F, caso10F],
-    descripcion: "Cámaras ocultas en baños de mujeres dentro del ámbito judicial. Un caso que interpela el derecho a la intimidad, la integridad sexual y el acceso a una reparación integral para las víctimas.",
-    likes: 212,
+    descripcion: "En un caso de violencia familiar, se logró la absolución de la imputada por el delito de lesiones leves. Se demostró que la conducta atribuida no constituía delito y que la imputada actuó en legítima defensa. La resolución judicial destacó la importancia de considerar el contexto de violencia y la necesidad de proteger a las víctimas.  ",
+    likes: 167,
   }
 ];
 
