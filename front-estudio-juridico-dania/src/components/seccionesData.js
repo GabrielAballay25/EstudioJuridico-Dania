@@ -94,21 +94,6 @@ export const SECTIONS = [
     `,
   },
   {
-    id: "casos",
-    label: "Casos documentados",
-    icon: "FolderOpen",
-    cases: [
-      {
-        name: "Flavia Saganías",
-        desc: "Condenada a 23 años de prisión. Denunció el abuso sexual de su hija; la justicia archivó la causa. Al hacer un escrache en Facebook quedó involucrada como instigadora de la violencia posterior.",
-      },
-      {
-        name: 'Caso "Lila"',
-        desc: "La madre denunció abuso sexual del progenitor. La justicia no le creyó. Desde febrero de 2023 tiene suspendida la responsabilidad parental y no ve a su hija.",
-      },
-    ],
-  },
-  {
     id: "propuestas",
     label: "Propuestas",
     icon: "Lightbulb",
